@@ -1,12 +1,12 @@
 import React from 'react'
 const TodoItems = (props) => {
 
-  const {text} =props.task
+  const {text, id} =props.task
 
   return (
   <div>
     <p>
-      {text}
+      lalala{id}: {text}
     </p>
   </div>
   )
