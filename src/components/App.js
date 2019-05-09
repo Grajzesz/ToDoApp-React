@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import './App.css';
 import TodoList from './TodoList';
-import TodoItems from './TodoItems';
+// import TodoItems from './TodoItems';
+import TodoTask from './TodoTask';
 class App extends Component {
 
 
     render() {
         return (
             <div className="App">
-               
+               zycie
+               {/* <TodoTask/> */}
+               {/* <TodoList/> */}
             </div>
         );
     }
