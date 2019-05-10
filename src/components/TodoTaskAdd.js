@@ -46,9 +46,9 @@ class TodoTaskAdd extends Component {
                         onChange={this.handleText}
                     />
                     <div className="buttons">
-                    <div className='add' onClick={this.handleClick}><i class="fas fa-plus"></i></div>
-                    <div className='remove' onClick={() => this.props.delete(this.id)}><i class="fas fa-minus"></i></div>
-                    <div className='clear' onClick={() => this.props.deleteAll()}><i class="fas fa-trash-alt"></i></div>
+                    <div className='add' onClick={this.handleClick}><i className="fas fa-plus"></i></div>
+                    <div className='remove' onClick={() => this.props.delete(this.id)}><i className="fas fa-minus"></i></div>
+                    <div className='clear' onClick={() => this.props.deleteAll()}><i className="fas fa-trash-alt"></i></div>
                     </div>
                 </div>
 
