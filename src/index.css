@@ -30,7 +30,8 @@
     padding: 20px;
 }
 
-p, h2 {
+p,
+h2 {
     text-align: center;
 }
 
@@ -68,6 +69,11 @@ input:focus {
     width: 100%;
 }
 
+@media only screen and (max-width: 500px) {
+    .buttons {
+        font-size: 25px;
+    }
+}
 
 .add,
 .remove,
