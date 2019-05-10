@@ -20,7 +20,22 @@ class TodoTaskAdd extends Component {
         });
         this.counter--;
     };
-
+    handleKey = e => {
+        console.log('dziala');
+        const { text } = this.state;
+        if (e.key === 'Enter') {
+            if (text.length > 1) {
+                const add = this.props.add(text);
+                if (add) {
+                    this.setState({
+                        text: ''
+                    });
+                }
+            } else {
+                console.log('za krotkie');
+            }
+        }
+    };
     handleClick = e => {
         console.log('dziala');
         const { text } = this.state;
@@ -44,6 +59,7 @@ class TodoTaskAdd extends Component {
                         placeholder="Input task"
                         value={this.state.text}
                         onChange={this.handleText}
+                        onKeyPress={this.handleKey}
                     />
                     <div className="buttons">
                         <div className="add" onClick={this.handleClick}>
