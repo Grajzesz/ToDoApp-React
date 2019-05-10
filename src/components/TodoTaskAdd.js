@@ -21,19 +21,19 @@ class TodoTaskAdd extends Component {
         this.counter--;
     };
 
-
     handleClick = e => {
-       console.log('dziala');
-       const {text} =this.state
-       if(text.length >1){
-      const add = this.props.add(text)
-      if(add){
-          this.setState({
-            text:""
-          })
+        console.log('dziala');
+        const { text } = this.state;
+        if (text.length > 1) {
+            const add = this.props.add(text);
+            if (add) {
+                this.setState({
+                    text: ''
+                });
+            }
+        } else {
+            console.log('za krotkie');
         }
-      }else{console.log('za krotkie');
-      }
     };
     render() {
         return (
@@ -41,17 +41,28 @@ class TodoTaskAdd extends Component {
                 <div className="form">
                     <input
                         type="text"
-                        placeholder="dodaj"
+                        placeholder="Input task"
                         value={this.state.text}
                         onChange={this.handleText}
                     />
                     <div className="buttons">
-                    <div className='add' onClick={this.handleClick}><i className="fas fa-plus"></i></div>
-                    <div className='remove' onClick={() => this.props.delete(this.id)}><i className="fas fa-minus"></i></div>
-                    <div className='clear' onClick={() => this.props.deleteAll()}><i className="fas fa-trash-alt"></i></div>
+                        <div className="add" onClick={this.handleClick}>
+                            <i className="fas fa-plus" />
+                        </div>
+                        <div
+                            className="remove"
+                            onClick={() => this.props.delete(this.id)}
+                        >
+                            <i className="fas fa-minus" />
+                        </div>
+                        <div
+                            className="clear"
+                            onClick={() => this.props.deleteAll()}
+                        >
+                            <i className="fas fa-trash-alt" />
+                        </div>
                     </div>
                 </div>
-
             </div>
         );
     }
