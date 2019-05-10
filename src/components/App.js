@@ -41,7 +41,10 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                zycie
+            <div className="title">
+                <h2>ToDoApp - React</h2>
+                <p>Mariusz</p>
+                </div>
                 <TodoTaskAdd
                     add={this.addTask}
                     delete={this.deleteTask}
@@ -50,8 +53,8 @@ class App extends Component {
                 />
                 <TodoList
                     tasks={this.state.tasks}
-                    delete={this.deleteTask}
-                    add={this.handleClick}
+
+
                 />
             </div>
         );

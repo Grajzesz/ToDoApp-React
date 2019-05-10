@@ -1,15 +1,14 @@
-import React from 'react'
-const TodoItems = (props) => {
+import React from 'react';
+const TodoItems = props => {
+    const { text, id } = props.task;
 
-  const {text, id} =props.task
-
-  return (
-  <div>
-    <p>
-      lalala{id}: {text}
-    </p>
-  </div>
-  )
+    return (
+        <div>
+            <p>
+                Task Number {id}: {text}
+            </p>
+        </div>
+    );
 };
 
 export default TodoItems;
