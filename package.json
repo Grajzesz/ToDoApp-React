@@ -8,6 +8,7 @@
         "react-dom": "^16.8.6",
         "react-scripts": "2.1.8"
     },
+    "homepage": "http://mariuszbuskiewicz.pl/todoapp/Apps/todoreact/",
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
